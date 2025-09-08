@@ -373,3 +373,136 @@
 // let totolPrice = books.reduce((sum,b) => sum + b.price ,0);
 // console.log(totolPrice);
 
+
+//some advance topic of javascript
+
+
+// function fatchData (callback){
+//     console.log("feaching data");
+//     setTimeout( () => {
+//         console.log("data is featched");
+//         callback();
+//     },2000)
+    
+// }
+
+
+
+// function processingData () {
+//     console.log("Processing data");
+    
+// }
+
+// fatchData(processingData)
+
+
+
+
+
+//promiss in javasript
+
+
+
+// let myPromiss = new Promise((resolve,reject) => {
+//     let isSuccess = true;
+
+//     setTimeout(() => {
+//         if(isSuccess){
+//             resolve("Task is completed")
+//         }
+//         else{
+//             reject("Task is not Completed")
+//         }
+//     },2000)
+// })
+
+// myPromiss.then( (res) => {
+//     console.log(res)
+// }).catch( (e) => {
+//     console.log(e);
+    
+// })
+
+
+// async / await in javascript
+
+
+
+// function getData(){
+//     return new Promise(resolve => {
+//         setTimeout( () => resolve("Data received"),2000)
+//     })
+// }
+
+
+// async function fatchdata() {
+//     console.log("Featching");
+//     let result = await getData();
+//    console.log(result);
+//     console.log("!Done");
+    
+// }
+
+// fatchdata()
+
+
+// function orderFood(){
+//     return new Promise(resolve => {
+//         setTimeout(() => resolve("Food is ready!!"),2000)
+//     })  
+// }
+
+// async function getOrder() {
+//     console.log("Food is preperring");
+//     let result = await orderFood();
+//     console.log(result);
+//     console.log("Completed");
+// }
+
+// getOrder()
+
+//some real wor example uing api 
+
+
+
+// async function getUserData() {
+//     try {
+//         console.log("Fetching data [async/await]");
+
+//         let res = await fetch("https://api.api-ninjas.com/v1/randomuser", {
+//             headers: { "X-Api-Key": "YOUR_API_KEY_HERE" } // API Ninjas requires an API key
+//         });
+
+//         let user = await res.json();
+//         console.log("This is random user:", user);
+
+//     } catch (error) {
+//         console.log("Error in data fetching:", error);
+//     }
+// }
+
+// getUserData();
+
+
+
+
+
+// async function getApiHit(){
+//     try{
+//         console.log("Fetching data from api");
+        
+//         let res = await fetch("https://randomuser.me/api/");
+
+//         let users = await res.json(); 
+
+//         users.map((user) => {
+//             console.log(`${user.name} , hello ${user.email}`);
+//         })
+
+//     }catch(error){ 
+//         console.log("Error in the code:", error);
+//     }
+// }
+
+// getApiHit();
+
